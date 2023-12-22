@@ -1,0 +1,50 @@
+/// Font general
+/// @type List
+$text-font: "Jost", Georgia, sans-serif;
+
+///Font size general
+/// @type Size
+$text-font-size: 16px;
+
+///Font weight general
+$text-font-weight: 300;
+
+///Line height generl
+$text-line-height: 1.5;
+
+///Color de texto general
+/// @type Color
+$text-line-color: $body-color;
+
+/// Font de los titulos
+/// @type List
+$heading-font: "Afacad", Georgia, sans-serif;
+
+///Font-weight de los titulos
+$heading-font-weight: 400;
+
+///Color de texto de los titulos
+/// @type Color
+$heading-color: #f3a3a3;
+
+///Line height de los titulos
+$heading-line-height: 1.24;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  color: $heading-color;
+}
+
+///Links
+$nav-link-font-size: 0.85rem;
+$nav-link-font-weight: 300;
+
+///Dropdown
+$dropdown-font-size: 1rem;

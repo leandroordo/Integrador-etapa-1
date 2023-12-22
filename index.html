@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Leandro Ordoñez" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Juguetería Cósmica</title>
+  </head>
+  <body>
+    <header class="header__main">
+      <nav class="navbar__main">
+        <div class="navbar__container">
+          <a class="navbar__logo">
+            <img src="./images/logo.png" alt="Logo" />
+          </a>
+          <div class="navbar__body">
+            <ul class="navbar__nav">
+              <li class="navbar__item">
+                <a class="navitem__link active" href="#">Inicio</a>
+              </li>
+              <li class="navbar__item">
+                <a class="navitem__link" href="#">Nosotros</a>
+              </li>
+              <li class="navbar__item">
+                <a class="navitem__link" href="#">Contacto</a>
+              </li>
+              <li class="navbar__item">
+                <a
+                  class="navitem__link dropdown__arrow dropdown"
+                  href="#"
+                  role="button"
+                >
+                  Admin</a
+                >
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="Alta.html" class="dropdown__item">Dar de alta</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="navbar__search">
+              <ul class="navbar__search-items">
+                <input type="text" placeholder="Buscar..." class="textbox" />
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="container-main">
+        <div class="banner__item">
+          <div class="banner__image-container">
+            <img
+              src="images/banner.jpg"
+              alt="La Juguetería"
+              class="banner__image"
+            />
+          </div>
+        </div>
+        <div class="banner__text-container">
+          <h1 class="banner__text-big">
+            Los juguetes
+            <span class="banner__text-smaller">que siempre soñaste</span>
+          </h1>
+          <p>
+            ¿Estás buscando un juguete único en el mundo? Nuestra colección de
+            juguetes cósmicos tiene los mejores y más raros juguetes que traerán
+            felicidad a chicos y grandes.
+          </p>
+          <div class="banner__text-background">
+            <img src="images/background.png" alt="fondo" class="img-full" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-main">
+      <div class="products__main">
+        <div class="products__icon">
+          <img src="images/icon.svg" alt="juguetes" />
+        </div>
+        <h2 class="section__title">Nuestros productos</h2>
+        <div class="products__container">
+          <div class="product__card">
+            <div class="card__image">
+              <img
+                src="images/productos/1.png"
+                alt="varita mágica"
+                class="card__image-fluid"
+              />
+            </div>
+            <div class="card__description">
+              <h3 class="card__description-title">
+                <a href="#">Varita mágica</a>
+              </h3>
+              <div class="card__description-text">
+                Varita mágica que hace magia de verdad
+              </div>
+              <div class="card__description-price">$4200</div>
+              <a href="#" class="button"
+                >Comprar
+                <svg class="cart" width="18" height="18">
+                  <use xlink:href="#cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

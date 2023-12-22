@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// Estilos básicos
+// -----------------------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $text-font;
+  font-size: $text-font-size;
+  font-weight: $text-font-weight;
+  line-height: $text-line-height;
+  letter-spacing: 0.03rem;
+  color: $text-line-color;
+  background-color: $body-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  margin: 25px 0;
+}
+
+h1 {
+  font-size: 4.125rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: $color-gray-500;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+input::placeholder {
+  color: $color-secondary;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+.container-main {
+  @include respond-to("xxlarge") {
+    max-width: 1330px;
+  }
+  @include respond-to("xlarge") {
+    max-width: 1130px;
+  }
+}
+
+.img-full {
+}

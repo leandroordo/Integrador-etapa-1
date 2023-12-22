@@ -1,0 +1,111 @@
+// -----------------------------------------------------------------------------
+// Estilos del navbar
+// -----------------------------------------------------------------------------
+$navbar-color: rgba(0, 0, 0, 1);
+$nav-link-color: rgba(0, 0, 0, 0.65);
+
+.navbar__main {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0.5rem;
+
+  @include respond-to("large") {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+.navbar__container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond-to("large") {
+    max-width: 960px;
+  }
+
+  @include respond-to("xlarge") {
+    max-width: 1140px;
+  }
+}
+
+.navbar__logo {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-right: 3rem;
+  font-size: 1.25rem;
+  color: $navbar-color;
+  text-decoration: none;
+  white-space: nowrap;
+
+  & img {
+    width: 100px;
+  }
+}
+
+.navbar__body {
+  position: static;
+  z-index: auto;
+  flex-grow: 1;
+  width: auto !important;
+  height: auto !important;
+  visibility: visible !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  transform: none !important;
+  transition: none;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.navbar__nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3rem !important;
+  padding-right: 1rem !important;
+  flex-grow: 1 !important;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar__item {
+  margin-left: 1rem;
+}
+
+.navitem__link {
+  display: block;
+  padding: 0.5rem;
+  font-size: $nav-link-font-size;
+  font-weight: $nav-link-font-weight;
+  color: $nav-link-color;
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+
+  .dropdown__arrow {
+    position: relative;
+    display: inline-block;
+    font-size: 36px;
+  }
+
+  &:active {
+  }
+}
+
+.navbar__search {
+}
+
+.navbar__search-items {
+}

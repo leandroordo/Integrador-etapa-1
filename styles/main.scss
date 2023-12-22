@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;700&family=Jost:wght@200;300;400;500;600&display=swap");
+
+// 1. Variables, funciones y mixins
+@import "./abstracts/variables", "./abstracts/functions", "./abstracts/mixins";
+
+// 2. Vendors
+@import "./vendors/normalize";
+
+// 3. Estilos base
+@import "./base/typography", "./base/base", "./base/fonts", "./base/helpers";
+
+// 4. Estilos de los layouts
+@import "./layout/header", "./layout/footer", "./layout/form", "./layout/navbar";
+
+// 5. Componentes
+@import "./components/button", "./components/banner", "./components/card",
+  "./components/dropdown", "./components/products", "./components/section",
+  "./components/textbox";
+
+// 6. Estilos de las distintas páginas
+@import "./pages/index";
+
+// 7. Temas
+@import "./themes/default";
