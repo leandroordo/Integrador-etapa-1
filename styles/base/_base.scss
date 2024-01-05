@@ -19,7 +19,7 @@ body {
   font-weight: $text-font-weight;
   line-height: $text-line-height;
   letter-spacing: 0.03rem;
-  color: $text-line-color;
+  color: $default-text-color;
   background-color: $body-color;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -74,13 +74,25 @@ svg {
 }
 
 .container-main {
-  @include respond-to("xxlarge") {
-    max-width: 1330px;
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond-to("small") {
+    max-width: 540px;
+  }
+  @include respond-to("medium") {
+    max-width: 720px;
+  }
+  @include respond-to("large") {
+    max-width: 960px;
   }
   @include respond-to("xlarge") {
-    max-width: 1130px;
+    max-width: 1140px;
   }
-}
-
-.img-full {
+  @include respond-to("xxlarge") {
+    max-width: 1320px;
+  }
 }

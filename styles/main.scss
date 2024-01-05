@@ -11,7 +11,8 @@
 @import "./base/typography", "./base/base", "./base/fonts", "./base/helpers";
 
 // 4. Estilos de los layouts
-@import "./layout/header", "./layout/footer", "./layout/form", "./layout/navbar";
+@import "./layout/header", "./layout/footer", "./layout/form", "./layout/navbar",
+  "./layout/banner";
 
 // 5. Componentes
 @import "./components/button", "./components/banner", "./components/card",

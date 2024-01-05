@@ -341,7 +341,7 @@ body {
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.03rem;
-  color: #f9f9f9;
+  color: #a7a7a7;
   background-color: #f9f9f9;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -398,14 +398,36 @@ svg {
   vertical-align: middle;
 }
 
-@media (min-width: 1400px) {
+.container-main {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
   .container-main {
-    max-width: 1330px;
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-main {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-main {
+    max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
   .container-main {
-    max-width: 1130px;
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-main {
+    max-width: 1320px;
   }
 }
 
@@ -522,6 +544,53 @@ svg {
   display: inline-block;
   font-size: 36px;
 }
+.banner__item {
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner__image-container {
+  flex: 1;
+  margin-right: 2rem;
+  width: 60%;
+}
+.banner__image-container img {
+  min-width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.banner__text-container {
+  width: 40%;
+  border-radius: 1rem;
+  border: 1px solid #dee2e6;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.banner__text-container h1 {
+  font-size: calc(1.575rem + 3.9vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.banner__text-smaller {
+  color: #a09c9c;
+  display: block;
+  font-size: calc(1.475rem + 2.7vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
 .dropdown__menu {
   display: none;
   min-width: 10rem;
@@ -583,4 +652,18 @@ svg {
 
 .dropdown-menu.show {
   display: block;
+}
+
+.products__main {
+  margin-top: 3rem;
+}
+
+.products__icon {
+  text-align: center;
+}
+
+.section__title {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.2;
 }/*# sourceMappingURL=main.css.map */
