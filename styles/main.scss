@@ -12,12 +12,12 @@
 
 // 4. Estilos de los layouts
 @import "./layout/header", "./layout/footer", "./layout/form", "./layout/navbar",
-  "./layout/banner";
+  "./layout/flexcontainer";
 
 // 5. Componentes
 @import "./components/button", "./components/banner", "./components/card",
-  "./components/dropdown", "./components/products", "./components/section",
-  "./components/textbox";
+  "./components/dropdown", "./components/parallax", "./components/products",
+  "./components/section", "./components/textbox";
 
 // 6. Estilos de las distintas páginas
 @import "./pages/index";

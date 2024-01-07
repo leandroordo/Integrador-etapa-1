@@ -4,19 +4,26 @@
 .products__main {
   margin-top: 3rem;
 }
+
 .products__icon {
   text-align: center;
 }
+
 .products__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 
 .product__card {
-}
+  background: #fafafa;
+  box-shadow: 0 2px 7px #dfdfdf;
+  margin: 10px;
+  width: 300px;
+  transition: box-shadow 0.4s ease-in-out;
 
-.card__description-title {
-}
-
-.card__description-text {
-}
-.card__description-price {
+  &:hover {
+    box-shadow: 4px 4px 17px grey;
+    transform: translate(-3px, -3px);
+  }
 }

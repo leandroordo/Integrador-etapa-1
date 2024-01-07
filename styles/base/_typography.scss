@@ -9,12 +9,15 @@ $text-font-size: 16px;
 ///Font weight general
 $text-font-weight: 300;
 
-///Line height generl
+///Line height general
 $text-line-height: 1.5;
 
 ///Color de texto general
 /// @type Color
 $text-line-color: $body-color;
+
+///Color de texto primario
+$primary-rgb: 240, 162, 162;
 
 /// Font de los titulos
 /// @type List
@@ -48,3 +51,8 @@ $nav-link-font-weight: 300;
 
 ///Dropdown
 $dropdown-font-size: 1rem;
+
+.text-primary {
+  --bs-text-opacity: 1;
+  color: $primary-rgb;
+}

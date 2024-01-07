@@ -8,6 +8,40 @@
     <title>Juguetería Cósmica</title>
   </head>
   <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol
+        xmlns="http://www.w3.org/2000/symbol"
+        id="cart"
+        viewBox="0 0 21 21"
+      >
+        <g fill="none" fill-rule="evenodd">
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 6.5h12.5l-1.586 5.55a2 2 0 0 1-1.923 1.45h-6.7a2 2 0 0 1-1.989-1.78L4.5 4.5h-2"
+          ></path>
+          <g fill="currentColor" transform="translate(2 4)">
+            <circle cx="5" cy="12" r="1"></circle>
+            <circle cx="13" cy="12" r="1"></circle>
+          </g>
+        </g>
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="search"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314Z"
+        ></path>
+      </symbol>
+    </svg>
     <header class="header__main">
       <nav class="navbar__main">
         <div class="navbar__container">
@@ -17,13 +51,13 @@
           <div class="navbar__body">
             <ul class="navbar__nav">
               <li class="navbar__item">
-                <a class="navitem__link active" href="#">Inicio</a>
+                <a class="navitem__link active" href="./">Inicio</a>
               </li>
               <li class="navbar__item">
-                <a class="navitem__link" href="#">Nosotros</a>
+                <a class="navitem__link" href="./aboutus.html">Nosotros</a>
               </li>
               <li class="navbar__item">
-                <a class="navitem__link" href="#">Contacto</a>
+                <a class="navitem__link" href="./contact.html">Contacto</a>
               </li>
               <li class="navbar__item">
                 <a
@@ -41,16 +75,24 @@
               </li>
             </ul>
             <div class="navbar__search">
-              <ul class="navbar__search-items">
-                <input type="text" placeholder="Buscar..." class="textbox" />
-              </ul>
+              <div class="navbar__search-items">
+                <svg width="18" height="18">
+                  <use xlink:href="#search"></use>
+                </svg>
+                <input
+                  type="text"
+                  class="form__control"
+                  placeholder="Buscar..."
+                  class="textbox"
+                />
+              </div>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <section>
-      <div class="container-main">
+      <div class="container__main">
         <div class="banner__item">
           <div class="banner__image-container">
             <img
@@ -77,13 +119,13 @@
       <div class="products__main">
         <div class="products__icon">
           <img src="images/icon.png" alt="juguetes" />
+          <h2 class="section__title">Nuestros productos</h2>
         </div>
-        <h2 class="section__title">Nuestros productos</h2>
         <div class="products__container">
           <div class="product__card">
             <div class="card__image">
               <img
-                src="images/productos/1.png"
+                src="images/productos/1.jpg"
                 alt="varita mágica"
                 class="card__image-fluid"
               />
@@ -96,6 +138,178 @@
                 Varita mágica que hace magia de verdad
               </div>
               <div class="card__description-price">$4200</div>
+              <a href="#" class="button"
+                >Comprar
+                <svg class="cart" width="18" height="18">
+                  <use xlink:href="#cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product__card">
+            <div class="card__image">
+              <img
+                src="images/productos/2.jpg"
+                alt="polvillo de hadas"
+                class="card__image-fluid"
+              />
+            </div>
+            <div class="card__description">
+              <h3 class="card__description-title">
+                <a href="#">Polvillo de hadas</a>
+              </h3>
+              <div class="card__description-text">
+                El original polvillo de hadas de Tinkerbell para poder volar
+              </div>
+              <div class="card__description-price">$1700</div>
+              <a href="#" class="button"
+                >Comprar
+                <svg class="cart" width="18" height="18">
+                  <use xlink:href="#cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="product__card">
+            <div class="card__image">
+              <img
+                src="images/productos/3.png"
+                alt="alfombra mágica"
+                class="card__image-fluid"
+              />
+            </div>
+            <div class="card__description">
+              <h3 class="card__description-title">
+                <a href="#">Alfombra mágica</a>
+              </h3>
+              <div class="card__description-text">
+                Alfombra mágica para volar. Importada de Arabia.
+              </div>
+              <div class="card__description-price">$8550</div>
+              <a href="#" class="button"
+                >Comprar
+                <svg class="cart" width="18" height="18">
+                  <use xlink:href="#cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="product__card">
+            <div class="card__image">
+              <img
+                src="images/productos/4.jpg"
+                alt="moto voladora"
+                class="card__image-fluid"
+              />
+            </div>
+            <div class="card__description">
+              <h3 class="card__description-title">
+                <a href="#">Motocicleta voladora</a>
+              </h3>
+              <div class="card__description-text">
+                Moto con alas y cohetes. Puede volar por los cielos
+              </div>
+              <div class="card__description-price">$450000</div>
+              <a href="#" class="button"
+                >Comprar
+                <svg class="cart" width="18" height="18">
+                  <use xlink:href="#cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="product__card">
+            <div class="card__image">
+              <img
+                src="images/productos/5.jpg"
+                alt="unicornio"
+                class="card__image-fluid"
+              />
+            </div>
+            <div class="card__description">
+              <h3 class="card__description-title">
+                <a href="#">Unicornio de colores</a>
+              </h3>
+              <div class="card__description-text">
+                Unicornio real con cabello de colores. Incluye una bolsa de
+                comida de unicornios de regalo.
+              </div>
+              <div class="card__description-price">$36700</div>
+              <a href="#" class="button"
+                >Comprar
+                <svg class="cart" width="18" height="18">
+                  <use xlink:href="#cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="product__card">
+            <div class="card__image">
+              <img
+                src="images/productos/6.jpg"
+                alt="habichuelas"
+                class="card__image-fluid"
+              />
+            </div>
+            <div class="card__description">
+              <h3 class="card__description-title">
+                <a href="#">Habichuelas mágicas</a>
+              </h3>
+              <div class="card__description-text">
+                Paquete de 4 habichuelas mágicas. Para obtener plantas hasta las
+                nubes.
+              </div>
+              <div class="card__description-price">$36700</div>
+              <a href="#" class="button"
+                >Comprar
+                <svg class="cart" width="18" height="18">
+                  <use xlink:href="#cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="product__card">
+            <div class="card__image">
+              <img
+                src="images/productos/7.jpg"
+                alt="escoba voladora"
+                class="card__image-fluid"
+              />
+            </div>
+            <div class="card__description">
+              <h3 class="card__description-title">
+                <a href="#">Escoba mágica</a>
+              </h3>
+              <div class="card__description-text">
+                Escoba voladora auténtica.
+              </div>
+              <div class="card__description-price">$2800</div>
+              <a href="#" class="button"
+                >Comprar
+                <svg class="cart" width="18" height="18">
+                  <use xlink:href="#cart"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="product__card">
+            <div class="card__image">
+              <img
+                src="images/productos/8.jpg"
+                alt="Lentes de rayos X"
+                class="card__image-fluid"
+              />
+            </div>
+            <div class="card__description">
+              <h3 class="card__description-title">
+                <a href="#">Lentes de rayos X</a>
+              </h3>
+              <div class="card__description-text">
+                Espectaculares lentes de rayos X que permiten ver a través de
+                las paredes.
+              </div>
+              <div class="card__description-price">$4500</div>
               <a href="#" class="button"
                 >Comprar
                 <svg class="cart" width="18" height="18">

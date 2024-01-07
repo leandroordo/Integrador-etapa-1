@@ -2,7 +2,11 @@
 // Estilos de una sección del home
 // -----------------------------------------------------------------------------
 .section__title {
-  font-size: 4.5rem;
+  font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
   line-height: 1.2;
+
+  @include respond-to("large") {
+    font-size: 4.5rem;
+  }
 }
