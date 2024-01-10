@@ -69,7 +69,7 @@
                 >
                 <ul class="dropdown__menu">
                   <li>
-                    <a href="Alta.html" class="dropdown__item">Dar de alta</a>
+                    <a href="./alta.html" class="dropdown__item">Dar de alta</a>
                   </li>
                 </ul>
               </li>
@@ -115,45 +115,153 @@
             </p>
           </div>
           <div class="container__item-right">
-            <form id="contact-form">
-              <div class="form__row-double">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Escriba su nombre"
-                  class="form__control"
-                />
-                <input
-                  type="text"
-                  name="email"
-                  placeholder="Escriba su e-mail"
-                  class="form__control"
-                />
+            <form
+              id="contact-form"
+              data-form
+              data-submitmessage="Gracias por enviar sus comentarios"
+            >
+              <div class="form__row-single" data-formgroup>
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Escriba su nombre"
+                    class="form__control"
+                    required
+                    maxlength="100"
+                    data-validate
+                    data-required
+                    data-required-message="No olvide escribir su nombre"
+                    data-minlength="3"
+                    data-maxlength="100"
+                  />
+                  <small data-formerror></small>
+                </div>
               </div>
-              <div class="form__row-single">
+              <div class="form__row-double" data-formgroup>
+                <div>
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="Escriba su e-mail"
+                    class="form__control"
+                    maxlength="255"
+                    data-validate
+                    data-required
+                    data-required-message="No olvide escribir su dirección de e-mail"
+                    data-minlength="5"
+                    data-maxlength="255"
+                    data-email
+                    data-emailerrormessage="Escriba una dirección válida de e-mail"
+                  />
+                  <small data-formerror></small>
+                </div>
                 <input
                   type="text"
                   name="phone"
                   placeholder="Número de teléfono"
                   class="form__control"
+                  maxlength="100"
                 />
               </div>
-              <div class="form__row-single">
-                <textarea
-                  placeholder="Escriba su mensaje o consulta"
-                  class="form__control"
-                  rows="8"
-                ></textarea>
+              <div class="form__row-single" data-formgroup>
+                <div>
+                  <textarea
+                    placeholder="Escriba su mensaje o consulta"
+                    class="form__control"
+                    rows="8"
+                    data-validate
+                    data-required
+                    data-required-message="No olvide escribir el mensaje"
+                    data-minlength="5"
+                    data-maxlength="4000"
+                  ></textarea>
+                  <small data-formerror></small>
+                </div>
               </div>
               <div class="form__row-grid">
-                <button class="btn btn-primary btn-lg rounded-0">Submit</button>
+                <button class="button">Enviar</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="footer__background-top">
+        <img src="images/nubes.png" alt="fondo de nubes" />
+      </div>
+      <div class="footer__container">
+        <div class="container__row footer__flex">
+          <div class="footer__col">
+            <div class="footer__item">
+              <h5>Accesos rápidos</h5>
+              <ul class="footer__list">
+                <li class="footer__listitem">
+                  <a href="./index.html">Inicio</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="./aboutus.html">Nosotros</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="./contact.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__item">
+              <h5>Ayuda</h5>
+              <ul class="footer__list">
+                <li class="footer__listitem">
+                  <a href="#">Preguntas frecuentes</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="#">Privacidad</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="#">Términos y condiciones</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__item">
+              <h5>Redes sociales</h5>
+              <ul class="footer__list">
+                <li class="footer__listitem">
+                  <a href="instagram.com">Instagram</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="youtube.com">Youtube</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="facebook.com">Facebook</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__item">
+              <h5>Contacto</h5>
+              <ul class="footer__list">
+                <li class="footer__listitem">Avenida De Las Estrellas 1234</li>
+                <li class="footer__listitem">
+                  <tel>Tel (303) 456-789-000</tel>
+                </li>
+                <li class="footer__listitem">
+                  <a href="mailto:info@jugueteriacosmica.com"
+                    >info@jugueteriacosmica.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="./js/main.js"></script>
+    <script src="./js/validation.js"></script>
   </body>
 </html>

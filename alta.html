@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Leandro Ordoñez" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Juguetería Cósmica - Alta de producto</title>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol
+        xmlns="http://www.w3.org/2000/symbol"
+        id="cart"
+        viewBox="0 0 21 21"
+      >
+        <g fill="none" fill-rule="evenodd">
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 6.5h12.5l-1.586 5.55a2 2 0 0 1-1.923 1.45h-6.7a2 2 0 0 1-1.989-1.78L4.5 4.5h-2"
+          ></path>
+          <g fill="currentColor" transform="translate(2 4)">
+            <circle cx="5" cy="12" r="1"></circle>
+            <circle cx="13" cy="12" r="1"></circle>
+          </g>
+        </g>
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        id="search"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314Z"
+        ></path>
+      </symbol>
+    </svg>
+    <header class="header__main">
+      <nav class="navbar__main">
+        <div class="navbar__container">
+          <a class="navbar__logo">
+            <img src="./images/logo.png" alt="Logo" />
+          </a>
+          <div class="navbar__body">
+            <ul class="navbar__nav">
+              <li class="navbar__item">
+                <a class="navitem__link active" href="./">Inicio</a>
+              </li>
+              <li class="navbar__item">
+                <a class="navitem__link" href="./aboutus.html">Nosotros</a>
+              </li>
+              <li class="navbar__item">
+                <a class="navitem__link" href="./contact.html">Contacto</a>
+              </li>
+              <li class="navbar__item">
+                <a
+                  class="navitem__link dropdown__arrow dropdown"
+                  href="#"
+                  role="button"
+                >
+                  Admin</a
+                >
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="./alta.html" class="dropdown__item">Dar de alta</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="navbar__search">
+              <div class="navbar__search-items">
+                <svg width="18" height="18">
+                  <use xlink:href="#search"></use>
+                </svg>
+                <input
+                  type="text"
+                  class="form__control"
+                  placeholder="Buscar..."
+                  class="textbox"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="parallax__container4">
+      <div class="paralax__caption">
+        <h1>Juguetería Cósmica</h1>
+        <h2>Alta de producto</h2>
+      </div>
+    </section>
+
+    <div class="parallax__buffer">
+      <div class="container__main">
+        <form
+          id="contact-form"
+          data-form
+          data-submitmessage="Alta de producto exitosa"
+        >
+          <div class="container__row">
+            <div class="container__item-left">
+              <h3>Datos del producto</h3>
+              <div class="form__row" data-formgroup>
+                <label for="name">Nombre*</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form__control"
+                  required
+                  data-validate
+                  data-required
+                  data-required-message="El nombre del producto es obligatorio"
+                  data-minlength="3"
+                  data-maxlength="100"
+                />
+                <small data-formerror></small>
+              </div>
+              <div class="form__row-double">
+                <div class="form__controlgroup" data-formgroup>
+                  <label for="price">Precio*</label>
+                  <input
+                    type="text"
+                    name="price"
+                    id="price"
+                    class="form__control"
+                    required
+                    data-validate
+                    data-required
+                    data-required-message="El precio es obligatorio"
+                    data-minlength="4"
+                    data-maxlength="15"
+                    data-numeric
+                    data-positive
+                    data-minvalue="0.01"
+                  />
+                  <small data-formerror></small>
+                </div>
+                <div class="form__controlgroup" data-formgroup>
+                  <label for="stock">Stock*</label>
+                  <input
+                    type="text"
+                    name="stock"
+                    id="stock"
+                    class="form__control"
+                    required
+                    data-validate
+                    data-required
+                    data-required-message="El valor de stock es obligatorio"
+                    data-maxlength="5"
+                    data-numeric
+                    data-minvalue="0"
+                  />
+                  <small data-formerror></small>
+                </div>
+              </div>
+            </div>
+            <div class="container__item-right">
+              <h3>Más información</h3>
+              <div class="form__row" data-formgroup>
+                <label for="brand">Marca*</label>
+                <input
+                  type="text"
+                  name="brand"
+                  id="brand"
+                  class="form__control"
+                  required
+                  data-validate
+                  data-required
+                  data-required-message="La marca del producto es obligatoria"
+                  data-minlength="3"
+                  data-maxlength="100"
+                />
+                <small data-formerror></small>
+              </div>
+              <div class="form__row" data-formgroup>
+                <label for="category">Categoría*</label>
+                <select
+                  class="form__select form__control"
+                  name="category"
+                  id="category"
+                  required
+                  data-validate
+                  data-required
+                  data-required-message="La categoría del producto es obligatoria"
+                >
+                  <option value="1">Peluches</option>
+                  <option value="2">Pociones</option>
+                  <option value="3">Accesorios</option>
+                  <option value="4">Libros</option>
+                  <option value="5">Mágicos</option>
+                  <option value="6">Productos de Hadas</option>
+                  <option value="7">Voladores</option>
+                  <option value="8">Juegos</option>
+                  <option value="9">Muñecos</option>
+                  <option value="10">Deportivos</option>
+                  <option value="11">Disfraces y ropas</option>
+                  <option value="99">Otros</option>
+                </select>
+                <small data-formerror></small>
+              </div>
+              <div class="form__row" data-formgroup>
+                <label for="short_description">Descripción corta*</label>
+                <input
+                  type="text"
+                  name="short_description"
+                  id="short_description"
+                  class="form__control"
+                  required
+                  data-validate
+                  data-required
+                  data-required-message="Debe escribir la descripción del producto"
+                  data-minlength="10"
+                  data-maxlength="255"
+                />
+                <small data-formerror></small>
+              </div>
+              <div class="form__row" data-formgroup>
+                <label for="long_description">Descripción larga</label>
+                <textarea
+                  class="form__control"
+                  placeholder="Descripción larga del producto."
+                  name="long_description"
+                  id="long_description"
+                ></textarea>
+              </div>
+              <div class="form__row" data-formgroup>
+                <label for="free_delivery">
+                  <input
+                    class="form__check"
+                    type="checkbox"
+                    name="free_delivery"
+                    id="free_delivery"
+                  />
+                  Envío sin cargo
+                </label>
+              </div>
+              <div class="form__row-double">
+                <div class="form__controlgroup" data-formgroup>
+                  <label for="fromAge">Edad desde</label>
+                  <input
+                    type="text"
+                    name="fromAge"
+                    id="fromAge"
+                    class="form__control"
+                    maxlength="3"
+                    data-validate
+                    data-maxlength="3"
+                    data-numeric
+                    data-minvalue="0"
+                    data-maxvalue="99"
+                    data-rangefrom="fromAge"
+                    data-rangeto="toAge"
+                    data-rangeerrormessage="La edad desde debe ser menor a la edad hasta"
+                  />
+                  <small data-formerror></small>
+                </div>
+                <div class="form__controlgroup" data-formgroup>
+                  <label for="toAge">Edad hasta</label>
+                  <input
+                    type="text"
+                    name="toAge"
+                    id="toAge"
+                    class="form__control"
+                    maxlength="3"
+                    data-validate
+                    data-maxlength="3"
+                    data-numeric
+                    data-minvalue="0"
+                    data-maxvalue="99"
+                    data-rangefrom="fromAge"
+                    data-rangeto="toAge"
+                  />
+                  <small data-formerror></small>
+                </div>
+              </div>
+              <div class="form__row" data-formgroup>
+                <label for="photo">Fotografía*</label>
+                <input
+                  type="file"
+                  name="photo"
+                  id="photo"
+                  class="form__control"
+                  required
+                  data-validate
+                  data-required
+                  data-required-message="Debe seleccionar una fotografía"
+                  data-maxfilesize="4194304"
+                  data-allowed-types="jpg,jpeg,png,bmp"
+                  data-allowed-types-message="Solo se permiten archivos de tipo JPG o PNG"
+                />
+                <small data-formerror></small>
+              </div>
+              <div class="form__row-grid">
+                <button type="submit" name="submit" class="button">
+                  Aceptar
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="footer__background-top">
+        <img src="images/nubes.png" alt="fondo de nubes" />
+      </div>
+      <div class="footer__container">
+        <div class="container__row footer__flex">
+          <div class="footer__col">
+            <div class="footer__item">
+              <h5>Accesos rápidos</h5>
+              <ul class="footer__list">
+                <li class="footer__listitem">
+                  <a href="./index.html">Inicio</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="./aboutus.html">Nosotros</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="./contact.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__item">
+              <h5>Ayuda</h5>
+              <ul class="footer__list">
+                <li class="footer__listitem">
+                  <a href="#">Preguntas frecuentes</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="#">Privacidad</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="#">Términos y condiciones</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__item">
+              <h5>Redes sociales</h5>
+              <ul class="footer__list">
+                <li class="footer__listitem">
+                  <a href="instagram.com">Instagram</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="youtube.com">Youtube</a>
+                </li>
+                <li class="footer__listitem">
+                  <a href="facebook.com">Facebook</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__item">
+              <h5>Contacto</h5>
+              <ul class="footer__list">
+                <li class="footer__listitem">Avenida De Las Estrellas 1234</li>
+                <li class="footer__listitem">
+                  <tel>Tel (303) 456-789-000</tel>
+                </li>
+                <li class="footer__listitem">
+                  <a href="mailto:info@jugueteriacosmica.com"
+                    >info@jugueteriacosmica.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/validation.js"></script>
+  </body>
+</html>

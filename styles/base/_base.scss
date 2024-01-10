@@ -97,9 +97,34 @@ textarea {
   line-height: inherit;
 }
 
+textarea {
+  resize: vertical;
+}
+
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled),
 button:not(:disabled) {
   cursor: pointer;
+}
+
+ol,
+ul {
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+}
+
+small {
+  color: $color-error;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.error {
+  border-color: $color-error !important;
 }

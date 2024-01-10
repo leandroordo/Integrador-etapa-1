@@ -3,24 +3,38 @@
 // -----------------------------------------------------------------------------
 .button {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 10px 30px;
-  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5;
-  color: $default-text-color;
+  color: $button-color;
+  background-color: $button-background;
+  border-color: $button-border-color;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  border: 1px solid transparent;
+  border: 1px solid $button-border-color;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    color: $button-hover-color;
+    background-color: $button-hover-background;
+    border-color: $button-hover-border-color;
+  }
+}
+
+.button-rounded {
+  margin-top: 1.5rem;
+  padding: 10px 30px;
+  font-size: 1rem;
   color: $color-secondary;
+  border: 1px solid transparent;
   background-color: transparent;
   border-color: $color-gray-200;
   border-radius: 50rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   text-transform: capitalize;
 
   &:hover {

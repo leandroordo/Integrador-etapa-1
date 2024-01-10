@@ -2,28 +2,58 @@
 // Estilos del banner de la página principal
 // -----------------------------------------------------------------------------
 .banner__item {
-  margin-top: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem 0;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+
+  & > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
 }
 
 .banner__image-container {
-  flex: 1;
-  margin-right: 2rem;
-  width: 60%;
-  & img {
-    min-width: 400px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
+  @include respond-to("large") {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+.banner__image-container img {
+  margin-bottom: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+
+  @include respond-to("large") {
+    margin-bottom: 0;
   }
 }
 
 .banner__text-container {
-  width: 40%;
+  @include respond-to("small") {
+    flex: 0 0 auto;
+    width: 83%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include respond-to("medium") {
+    flex: 0 0 auto;
+    width: 92%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  @include respond-to("large") {
+    flex: 0 0 auto;
+    width: 50%;
+  }
   border-radius: 1rem;
   border: 1px solid #dee2e6;
   padding: 1rem;

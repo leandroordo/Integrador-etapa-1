@@ -50,6 +50,7 @@ $color-gray-300: #dcdad4;
 $color-gray-500: #a09c9c;
 $color-gray-700: #535353;
 $color-gray-800: #3d3a38;
+$color-error: #e77173;
 
 //Dropdown
 $dropdown-color: #a7a7a7;
@@ -59,5 +60,25 @@ $dropdown-item-color: #a7a7a7;
 $dropdown-hover-color: $body-color;
 $dropdown-hover-background: $color-primary;
 
+//Checkbox
+$checkbox-color: #a7a7a7;
+$checkbox-background: #f8f8f8;
+$checkbox-border: $color-primary;
+$checkbox-hover-color: $body-color;
+$checkbox-hover-background: $color-primary;
+
 //Controles
 $border-color: #dee2e6;
+
+//Botones
+$button-color: $color-light;
+$button-background: $color-primary;
+$button-border-color: $color-primary;
+$button-hover-color: $color-light;
+$button-hover-background: $color-secondary;
+$button-hover-border-color: $color-secondary;
+$button-focus-shadow-rgb: 49, 132, 253;
+$button-active-color: $color-light;
+$button-active-bg: $color-secondary;
+$button-active-border-color: $color-secondary;
+$button-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
