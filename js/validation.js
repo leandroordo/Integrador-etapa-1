@@ -7,7 +7,8 @@ if (forms.length > 0) {
     const inputs = form.querySelectorAll("[data-validate]");
 
     // Evento Submit
-    form.addEventListener("submit", submitForm.bind(form, inputs));
+    //form.addEventListener("submit", submitForm.bind(form, inputs));
+    form.addEventListener("submit", (e) => submitForm(inputs, e));
 
     inputs.forEach((input) => {
       // Evento input
@@ -219,9 +220,17 @@ function submitForm(inputs, e) {
     }
   });
 
-  if (e.target.dataset.submitmessage !== undefined) {
-    window.alert(e.target.dataset.submitmessage);
+  if (errors.length == 0) {
+    if (e.target.dataset.submitmessage !== undefined) {
+      window.alert(e.target.dataset.submitmessage);
+      if (typeof procesar === "function") {
+        procesar();
+      }
+    }
+    return true;
   }
+
+  return false;
 }
 
 // Validate email
